@@ -6,11 +6,12 @@
 <a href="http://dev.bukkit.org/server-mods/dragontravel/tickets/"><img src="https://dl.dropbox.com/u/37237580/Bukkit-Plugins/DragonTravel/Pictures/submit.jpg"></a>
 <hr/>
 
-Developer: XemsDoom<br>
+Original Developer: XemsDoom<br>
+Adopted By: ellbristow
 Documenter, Wiki: Phiwa<br>
-Version: 1.7.1<br>
-Website: http://xemsdoom.com<br>
-Twitter: @XemsDoom
+Version: 1.8.1<br>
+Website: http://xemsdoom.com https://<br>
+Twitter: @XemsDoom @ellbristow
 <hr/>
 
 <h3>DragonTravel on Curse's Mod-Spotlights | DragonTravel on Minecraft-Quarterly<br>
