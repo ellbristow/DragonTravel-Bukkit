@@ -69,7 +69,7 @@ public class DragonTravelMain extends JavaPlugin {
 	private static boolean shutdown = false;
 
 	static {
-
+                /*
 		// Check if Nover is already available
 		File nover = new File("plugins/", "NoverPackage.jar");
 		if (!nover.exists()) {
@@ -125,6 +125,7 @@ public class DragonTravelMain extends JavaPlugin {
 				}
 			}
 		}
+                */
 	}
 
 	/*
