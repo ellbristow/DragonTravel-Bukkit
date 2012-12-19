@@ -2,7 +2,7 @@ name: DragonTravel
 main: com.xemsdoom.dt.DragonTravelMain
 author: XemsDoom & Phiwa & ellbristow
 version: 1.8.2
-softdepend: [Vault, SpoutPlugin, AntiCheat, 'Nover Package']
+softdepend: [Vault, SpoutPlugin, AntiCheat]
 permissions:
     dt.mod.flight:
         default: op
