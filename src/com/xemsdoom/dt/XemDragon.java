@@ -1,15 +1,12 @@
 package com.xemsdoom.dt;
 
-import net.minecraft.server.EntityEnderDragon;
-import net.minecraft.server.World;
-
-import org.bukkit.Location;
-import org.bukkit.entity.Entity;
-
-import com.xemsdoom.dt.DragonTravelMain;
 import com.xemsdoom.dt.modules.Travels;
 import com.xemsdoom.dt.movement.Flight;
 import com.xemsdoom.dt.movement.Waypoint;
+import net.minecraft.server.v1_4_5.EntityEnderDragon;
+import net.minecraft.server.v1_4_5.World;
+import org.bukkit.Location;
+import org.bukkit.entity.Entity;
 
 /**
  * Copyright (C) 2011-2012 Moser Luca/Philipp Wagner
