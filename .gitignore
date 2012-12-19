@@ -6,3 +6,7 @@ target
 .classpath
 bin/
 .settings/
+/build/
+/nbproject/
+/manifest.mf
+/build.xml

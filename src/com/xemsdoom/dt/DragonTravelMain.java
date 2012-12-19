@@ -1,21 +1,26 @@
 package com.xemsdoom.dt;
 
+import com.xemsdoom.dt.anticheat.DragonTravelAntiCheat;
+import com.xemsdoom.dt.commands.Commands;
+import com.xemsdoom.dt.economy.EconomyHandler;
+import com.xemsdoom.dt.listeners.*;
+import com.xemsdoom.dt.modules.ConfigurationLoader;
+import com.xemsdoom.dt.modules.DatabaseLoader;
+import com.xemsdoom.dt.modules.FAQLoader;
+import com.xemsdoom.dt.modules.MessagesLoader;
+import com.xemsdoom.dt.movement.FlightEditor;
 import static com.xemsdoom.dt.movement.Waypoint.markers;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import com.xemsdoom.dt.spout.DragonTravelSpout;
+import com.xemsdoom.metrics.Metrics;
+import com.xemsdoom.mexdb.MexDB;
+import java.io.*;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.logging.Logger;
-
 import net.milkbowl.vault.Vault;
 import net.milkbowl.vault.economy.Economy;
-import net.minecraft.server.EntityTypes;
-
+import net.minecraft.server.v1_4_5.EntityTypes;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -28,24 +33,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.getspout.spoutapi.sound.SoundManager;
-
-import com.xemsdoom.dt.anticheat.DragonTravelAntiCheat;
-import com.xemsdoom.dt.commands.Commands;
-import com.xemsdoom.dt.economy.EconomyHandler;
-import com.xemsdoom.dt.listeners.BlockListener;
-import com.xemsdoom.dt.listeners.EntityListener;
-import com.xemsdoom.dt.listeners.FlightSignsInteract;
-import com.xemsdoom.dt.listeners.InputListener;
-import com.xemsdoom.dt.listeners.PlayerListener;
-import com.xemsdoom.dt.listeners.ScreenListener;
-import com.xemsdoom.dt.modules.ConfigurationLoader;
-import com.xemsdoom.dt.modules.DatabaseLoader;
-import com.xemsdoom.dt.modules.FAQLoader;
-import com.xemsdoom.dt.modules.MessagesLoader;
-import com.xemsdoom.dt.movement.FlightEditor;
-import com.xemsdoom.dt.spout.DragonTravelSpout;
-import com.xemsdoom.metrics.Metrics;
-import com.xemsdoom.mexdb.MexDB;
 
 /**
  * Copyright (C) 2011-2012 Moser Luca/Philipp Wagner
@@ -65,6 +52,9 @@ import com.xemsdoom.mexdb.MexDB;
  * 
  * You should have received a copy of the GNU General Public License along with
  * Foobar. If not, see <http://www.gnu.org/licenses/>.
+ * 
+ * Lovingly adopted and re-animated by ellbristow <admin@jigsawspain.com>
+ * 
  */
 public class DragonTravelMain extends JavaPlugin {
 

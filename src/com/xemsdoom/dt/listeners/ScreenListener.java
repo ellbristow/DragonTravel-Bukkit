@@ -1,14 +1,13 @@
 package com.xemsdoom.dt.listeners;
 
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.getspout.spoutapi.event.screen.ButtonClickEvent;
-import org.getspout.spoutapi.player.SpoutPlayer;
-
 import com.xemsdoom.dt.DragonTravelMain;
 import com.xemsdoom.dt.modules.Stations;
 import com.xemsdoom.dt.modules.Travels;
 import com.xemsdoom.dt.spout.gui.MenuScreen;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.getspout.spoutapi.event.screen.ButtonClickEvent;
+import org.getspout.spoutapi.player.SpoutPlayer;
 
 /**
  * Copyright (C) 2011-2012 Moser Luca/Philipp Wagner
