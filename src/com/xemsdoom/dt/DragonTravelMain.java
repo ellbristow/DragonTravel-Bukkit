@@ -15,13 +15,11 @@ import com.xemsdoom.metrics.Metrics;
 import com.xemsdoom.mexdb.MexDB;
 import java.io.*;
 import java.lang.reflect.Method;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.logging.Logger;
 import net.milkbowl.vault.Vault;
 import net.milkbowl.vault.economy.Economy;
 import net.minecraft.server.v1_4_5.EntityTypes;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -57,78 +55,6 @@ import org.getspout.spoutapi.sound.SoundManager;
  * 
  */
 public class DragonTravelMain extends JavaPlugin {
-
-	/*
-	 * Bukkit Package Versioning Bypass START
-	 * 
-	 * This static block of code allows us to bypass the Bukkit
-	 * package-versioning, this means that DragonTravel will not break on
-	 * minor/major updates, when there isn't a significant change.
-	 */
-
-	private static boolean shutdown = false;
-
-	/*static {
-		// Check if Nover is already available
-		File nover = new File("plugins/", "NoverPackage.jar");
-		if (!nover.exists()) {
-
-			System.out.println("[DragonTravel] Downloading NoverPackage: Please wait!");
-			InputStream fileIn = null;
-			OutputStream fileOut = null;
-
-			try {
-
-				URL noverUrl = new URL("http://dl.xemsdoom.com/NoverPackage.jar");
-				fileIn = noverUrl.openStream();
-				fileOut = new FileOutputStream(nover);
-
-				byte[] buffer = new byte[2048];
-				int bytes;
-
-				while ((bytes = fileIn.read(buffer)) != -1) {
-					fileOut.write(buffer, 0, bytes);
-				}
-
-				System.out.println("[DragonTravel] Downloaded NoverPackage. Please restart the server!");
-				System.out.println("[DragonTravel] Make sure to enable 'enabledInAllPlugins' in NoverPackage!");
-
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			} finally {
-				if (fileIn != null) {
-					try {
-						fileIn.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-
-				if (fileOut != null) {
-					try {
-						fileOut.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-
-				// Shutdown the server and prevent DragonTravel initialisation.
-				System.out.println("[DragonTravel] Shutting down server:");
-				try {
-					Thread.sleep(6000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				} finally {
-					Bukkit.shutdown();
-					shutdown = true;
-				}
-			}
-		}
-	}*/
-
-	/*
-	 * Bukkit Package Versioning Bypass End
-	 */
 
 	// Server
 	public static PluginManager pm;
@@ -219,10 +145,6 @@ public class DragonTravelMain extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-
-		if (shutdown) {
-			return;
-		}
 
 		PluginDescriptionFile description = getDescription();
 
