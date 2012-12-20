@@ -2,11 +2,11 @@ package com.xemsdoom.dt.modules;
 
 import java.util.ArrayList;
 
-import net.minecraft.server.v1_4_5.World;
+import net.minecraft.server.v1_4_6.World;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_4_5.CraftWorld;
+import org.bukkit.craftbukkit.v1_4_6.CraftWorld;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
