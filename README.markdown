@@ -10,7 +10,7 @@ Original Developer: XemsDoom<br>
 Adopted By: ellbristow
 Documenter, Wiki: Phiwa<br>
 Version: 1.8.1<br>
-Website: http://xemsdoom.coms<br>
+Website: http://xemsdoom.com https://jigsawspain.com<br>
 Twitter: @XemsDoom @ellbristow
 <hr/>
 
