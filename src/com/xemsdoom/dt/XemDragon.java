@@ -3,8 +3,8 @@ package com.xemsdoom.dt;
 import com.xemsdoom.dt.modules.Travels;
 import com.xemsdoom.dt.movement.Flight;
 import com.xemsdoom.dt.movement.Waypoint;
-import net.minecraft.server.v1_4_6.EntityEnderDragon;
-import net.minecraft.server.v1_4_6.World;
+import net.minecraft.server.v1_4_R1.EntityEnderDragon;
+import net.minecraft.server.v1_4_R1.World;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 
