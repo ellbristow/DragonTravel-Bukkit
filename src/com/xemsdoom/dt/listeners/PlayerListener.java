@@ -59,7 +59,7 @@ public class PlayerListener implements Listener {
 
 		if (DragonTravelMain.TravelInformation.containsKey(player)) {
 			XemDragon dragon = DragonTravelMain.TravelInformation.get(player);
-			Entity dragona = dragon.getBukkitEntity();
+			Entity dragona = dragon.getEntity();
 			dragona.remove();
 			DragonTravelMain.TravelInformation.remove(player);
 
@@ -97,7 +97,7 @@ public class PlayerListener implements Listener {
 
 			MusicHandler.stopEpicSound(player);
 			XemDragon dragon = DragonTravelMain.TravelInformation.get(player);
-			Entity dra = dragon.getBukkitEntity();
+			Entity dra = dragon.getEntity();
 			DragonTravelMain.TravelInformation.remove(player);
 			DragonTravelMain.XemDragonRemoval.remove(dragon);
 			dra.eject();

@@ -124,7 +124,7 @@ public class DragonTravelMain extends JavaPlugin {
 
 		// Removes all XemDragons which still exist(not stationary dragons)
 		for (XemDragon dragon : XemDragonRemoval.keySet()) {
-			LivingEntity a = (LivingEntity) dragon.getBukkitEntity();
+			LivingEntity a = (LivingEntity) dragon.getEntity();
 			a.remove();
 		}
 

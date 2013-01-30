@@ -74,7 +74,7 @@ public class EntityListener implements Listener {
 			return;
 
 		XemDragon dragon = DragonTravelMain.TravelInformation.get(player);
-		Entity dragona = (Entity) dragon.getBukkitEntity();
+		Entity dragona = (Entity) dragon.getEntity();
 		dragona.remove();
 		DragonTravelMain.TravelInformation.remove(player);
 	}

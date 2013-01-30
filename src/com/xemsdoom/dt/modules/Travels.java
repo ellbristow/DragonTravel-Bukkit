@@ -59,7 +59,7 @@ public class Travels {
 		// Removing dragon if already mounted
 		if (DragonTravelMain.TravelInformation.containsKey(player)) {
 			XemDragon dragon = DragonTravelMain.TravelInformation.get(player);
-			Entity dra = dragon.getBukkitEntity();
+			Entity dra = dragon.getEntity();
 			removePlayerandDragon(dra);
 		}
 
@@ -67,7 +67,7 @@ public class Travels {
 		World notchWorld = ((CraftWorld) player.getWorld()).getHandle();
 		XemDragon XemDragon = new XemDragon(player.getLocation(), notchWorld);
 		notchWorld.addEntity(XemDragon, SpawnReason.CUSTOM);
-		LivingEntity dragon = (LivingEntity) XemDragon.getBukkitEntity();
+		LivingEntity dragon = (LivingEntity) XemDragon.getEntity();
 
                 // Stop checking for fly hack on this player if AntiCheat enabled
 		if (DragonTravelMain.anticheat
@@ -110,7 +110,7 @@ public class Travels {
 		XemDragon dragon = DragonTravelMain.TravelInformation.get(player);
 
 		// Get Entity of XemDragon
-		Entity dra = dragon.getBukkitEntity();
+		Entity dra = dragon.getEntity();
 		removePlayerandDragon(dra);
 		CommandHandlers.dtpCredit(player);
 
@@ -356,7 +356,7 @@ public class Travels {
 
 		if (!name.equals(DragonTravelMain.config.getString("RandomDest-Name"))) {
 			if (!player.getWorld().toString().equalsIgnoreCase(DragonTravelMain.dbd.getString(name, "world"))) {
-				removePlayerandDragon(dragon.getBukkitEntity());
+				removePlayerandDragon(dragon.getEntity());
 				player.sendMessage(MessagesLoader.replaceColors(DragonTravelMain.messages.getString("DestinationTravelDifferentWorld")));
 				return;
 			}

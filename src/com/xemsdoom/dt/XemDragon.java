@@ -93,6 +93,14 @@ public class XemDragon extends EntityEnderDragon {
 	public XemDragon(World world) {
 		super(world);
 	}
+        
+        public Entity getEntity() {
+            if (bukkitEntity != null) {
+                return bukkitEntity;
+            } else {
+                return entity;
+            }
+        }
 
 	public void startTravel(Location loc) {
 
@@ -114,7 +122,7 @@ public class XemDragon extends EntityEnderDragon {
 
 	public void startFlight(Flight flight) {
 
-		entity = getBukkitEntity();
+		entity = getEntity();
 
 		this.flight = flight;
 		this.flight.loadWPs();
@@ -267,7 +275,7 @@ public class XemDragon extends EntityEnderDragon {
 		if (!move)
 			return;
 
-		Entity entity = getBukkitEntity();
+		entity = getEntity();
 
 		if (entity.getPassenger() == null)
 			return;
